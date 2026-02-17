@@ -1,0 +1,16 @@
+app:
+  title_ja: "🐄 牛群AIダッシュボード"
+  title_en: "🐄 Dairy AI Dashboard"
+  language: "ja"   # ja / en
+  timezone: "Asia/Tokyo"
+
+risk_thresholds:
+  mastitis: 0.65
+  ketosis: 0.60
+  estrus: 0.55
+  heat_stress_thi: 72
+
+files:
+  excel_db: "dairy_cow_management.xlsx"
+  models_dir: "models"
+  outputs_dir: "outputs"
