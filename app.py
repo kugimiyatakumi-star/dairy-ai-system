@@ -4,6 +4,7 @@ import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 import os
+from core.excel_io import read_sheet_df, append_row
 
 st.set_page_config(page_title="乳製品AIシステム", layout="wide")
 
@@ -15,8 +16,15 @@ uploaded_file = st.file_uploader("📂 Excelファイルをアップロード", 
 model = None
 
 if uploaded_file is not None:
-    df = pd.read_excel(uploaded_file)
-    st.subheader("📊 データ確認")
+        xlsx_path = "uploaded.xlsx"
+    with open(xlsx_path, "wb") as f:
+        f.write(uploaded_file.getbuffer())
+
+    sheet_name = "Sheet1"
+
+    df = read_sheet_df(xlsx_path, sheet_name)
+
+    st.subheader(f"📄 {sheet_name} の内容")
     st.dataframe(df)
 
     target_column = st.selectbox("🎯 予測したい列を選択", df.columns)
