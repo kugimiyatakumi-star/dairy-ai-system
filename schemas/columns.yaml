@@ -1,0 +1,18 @@
+required_columns:
+  cow_id: ["cow_id", "牛ID", "個体番号", "耳標", "CowID"]
+  date: ["date", "日付", "Date"]
+  milk_yield: ["milk_yield", "milk", "乳量", "Milk", "MilkYield"]
+  milking_count: ["milking_count", "回数", "搾乳回数", "MilkingCount"]
+  milking_minutes: ["milking_minutes", "搾乳時間", "MilkingMinutes"]
+  activity_neck: ["activity_neck", "首活動量", "首", "NeckActivity"]
+  activity_leg: ["activity_leg", "足活動量", "足", "LegActivity"]
+  calving_date: ["calving_date", "分娩日", "CalvingDate"]
+  insemination_date: ["insemination_date", "授精日", "種付け日", "InseminationDate"]
+  treatment_flag: ["treatment_flag", "治療", "治療フラグ", "TreatmentFlag"]
+
+optional_columns:
+  temp_c: ["temp_c", "気温", "Temperature", "TempC"]
+  rh: ["rh", "湿度", "Humidity", "RH"]
+  thi: ["thi", "THI"]
+  parity: ["parity", "産次", "Parity"]
+  dim: ["dim", "DIM", "分娩後日数"]
